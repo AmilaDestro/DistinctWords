@@ -1,0 +1,3 @@
+Hello!
+Here's a text sample which is read by the program.
+Text can be modified by a user.

@@ -1,6 +1,6 @@
-package words;
+package reader;
 
-import java.io.File;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,9 +11,15 @@ import java.util.List;
  * @author liudmyla.azarenko
  */
 public abstract class AbstractFileReader {
-    protected final List<String> fileData = new ArrayList<>();
+    protected final List<String> fileData;
+    protected final String file;
 
-    public abstract void readFile(final File fileToRead) throws IOException;
+    public AbstractFileReader(final String file) {
+        this.file = file;
+        this.fileData = new ArrayList<>();
+    }
+
+    public abstract void readFile() throws IOException;
 
     public List<String> getFileData() {
         return fileData;
