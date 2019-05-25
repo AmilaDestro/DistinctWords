@@ -1,7 +1,5 @@
 package reader;
 
-
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +17,7 @@ public abstract class AbstractFileReader {
         this.fileData = new ArrayList<>();
     }
 
-    public abstract void readFile() throws IOException;
+    public abstract void readFile();
 
     public List<String> getFileData() {
         return fileData;
