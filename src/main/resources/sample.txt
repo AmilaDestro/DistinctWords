@@ -1,4 +1,2 @@
 Hello!
-Here's a text sample which is read by the program.
-Text can be modified by a user. User can add his/her own text/digits/other characters.
-User may use any symbols, which are located on his/her keyboard, for tests.
+HELLO world,heLLo; Hello.
