@@ -32,7 +32,7 @@ public class WordProcessor implements FileDataProcessor {
         receivedText.forEach(text -> {
             List<String> allWords =
                     (List<String>) collectionTransformer.putObjectsFromArrayToCollection(text.split(EXPRESSION),
-                                                                                         new ArrayList());
+                                                                                         new ArrayList<>());
             Set<String> filteredWords = allWords.stream()
                                                 .filter(word -> !isWordAlreadyInCollectionIgnoreCase(word))
                                                 .collect(Collectors.toSet());
