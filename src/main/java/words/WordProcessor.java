@@ -1,5 +1,6 @@
 package words;
 
+import generics.ArrayToCollectionTransformer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,17 +18,21 @@ public class WordProcessor implements FileDataProcessor {
 
     private final Set<String> distinctWords;
     private final List<String> receivedText;
+    private final ArrayToCollectionTransformer collectionTransformer;
 
     public WordProcessor(final List<String> receivedText) {
         this.receivedText = receivedText;
         this.distinctWords = new HashSet<>();
+        this.collectionTransformer = new ArrayToCollectionTransformer<String>();
     }
 
     @Override
     public void processData() {
         LOG.info("Searching distinct words.");
         receivedText.forEach(text -> {
-            List<String> allWords = Arrays.asList(text.split(EXPRESSION));
+            List<String> allWords =
+                    (List<String>) collectionTransformer.putObjectsFromArrayToCollection(text.split(EXPRESSION),
+                                                                                         new ArrayList());
             Set<String> filteredWords = allWords.stream()
                                                 .filter(word -> !isWordAlreadyInCollectionIgnoreCase(word))
                                                 .collect(Collectors.toSet());
