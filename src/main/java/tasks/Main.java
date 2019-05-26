@@ -1,10 +1,12 @@
-import generics.ArrayToCollectionTransformer;
-import increment.IncrementSynchronize;
+package tasks;
+
+import tasks.generics.ArrayToCollectionTransformer;
+import tasks.increment.IncrementSynchronize;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import reader.AbstractFileReader;
-import reader.CustomFileReader;
-import words.WordProcessor;
+import tasks.reader.AbstractFileReader;
+import tasks.reader.CustomFileReader;
+import tasks.words.WordProcessor;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -12,7 +14,7 @@ import java.util.HashSet;
 import java.util.List;
 
 /**
- * Main class of this application
+ * tasks.Main class of this application
  *
  * @author liudmyla.azarenko
  */
@@ -31,7 +33,7 @@ public class Main {
         final WordProcessor processor = new WordProcessor(fileData);
         processor.processData();
 
-        LOG.info("Found distinct words: {}", processor.getDistinctWords());
+        LOG.info("Found distinct tasks.words: {}", processor.getDistinctWords());
 
         // Task #2
         LOG.info("Performing task #2");

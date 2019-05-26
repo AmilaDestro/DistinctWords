@@ -1,4 +1,4 @@
-package generics;
+package tasks.generics;
 
 import java.util.Arrays;
 import java.util.Collection;

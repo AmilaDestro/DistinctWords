@@ -1,4 +1,4 @@
-package reader;
+package tasks.reader;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,7 +9,7 @@ import java.io.IOException;
 
 
 /**
- * File reader class which implements readFile method
+ * File tasks.reader class which implements readFile method
  *
  * @author liudmyla.azarenko
  */

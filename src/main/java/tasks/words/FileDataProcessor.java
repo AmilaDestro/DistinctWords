@@ -1,4 +1,4 @@
-package words;
+package tasks.words;
 
 import java.util.Set;
 
@@ -15,7 +15,7 @@ public interface FileDataProcessor {
     void processData();
 
     /**
-     * Returns {@link Set} of distinct words from a file
+     * Returns {@link Set} of distinct tasks.words from a file
      */
     Set<String> getDistinctWords();
 }

@@ -1,9 +1,9 @@
-package increment;
+package tasks.increment;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * Class that performs synchronized increment of value in different ways (requirement of test task #3)
+ * Class that performs synchronized tasks.increment of value in different ways (requirement of test task #3)
  *
  * @author liudmyla.azarenko
  */

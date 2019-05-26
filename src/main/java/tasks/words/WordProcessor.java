@@ -1,6 +1,6 @@
-package words;
+package tasks.words;
 
-import generics.ArrayToCollectionTransformer;
+import tasks.generics.ArrayToCollectionTransformer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,7 +28,7 @@ public class WordProcessor implements FileDataProcessor {
 
     @Override
     public void processData() {
-        LOG.info("Searching distinct words.");
+        LOG.info("Searching distinct tasks.words.");
         receivedText.forEach(text -> {
             List<String> allWords =
                     (List<String>) collectionTransformer.putObjectsFromArrayToCollection(text.split(EXPRESSION),
@@ -43,7 +43,7 @@ public class WordProcessor implements FileDataProcessor {
     }
 
     /**
-     * Checks if passed word is already in the collection of distinct words
+     * Checks if passed word is already in the collection of distinct tasks.words
      * @param wordToCheck - {@link String} that will be checked
      * @return {@link Boolean} result
      */
