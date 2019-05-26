@@ -43,12 +43,12 @@ public class Main {
         final int length = numbers.length;
 
         LOG.info("Given array of {} numbers:", numbers.length);
-        for(int i = 0; i < length; i++) {
-            LOG.info("{}", numbers[i]);
+        for (Integer number : numbers) {
+            LOG.info("{}", number);
         }
 
         LOG.info("It will be transformed to collections.");
-        final ArrayToCollectionTransformer<Integer> collectionTransformer = new ArrayToCollectionTransformer<Integer>();
+        final ArrayToCollectionTransformer<Integer> collectionTransformer = new ArrayToCollectionTransformer<>();
         final Collection numbersList =
                 collectionTransformer.putObjectsFromArrayToCollection(numbers, new ArrayList<>());
         final Collection numbersSet =
